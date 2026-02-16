@@ -1,4 +1,4 @@
-import type { HeroStats } from "../types/Hero";
+import type { HeroStats } from "../../types/Hero";
 
 interface Props {
   stats: HeroStats;

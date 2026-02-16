@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { HeroStats } from "../types/Hero";
-import { PointsCalculator } from "../logic/PointsCalculator";
+import type { HeroStats } from "../../types/Hero";
+import { PointsCalculator } from "../../logic/PointsCalculator";
 import { PointsCard } from "./PointsCard";
 
 export default function CharacterCard() {
@@ -9,8 +9,10 @@ export default function CharacterCard() {
     agilidad: 0,
     magia: 0,
   });
+
   const gastados = PointsCalculator(stats);
   const puntosRestantes = 10 - gastados;
+
   const handleAddPoint = (name: string) => {
     if (gastados >= 10) return;
 
