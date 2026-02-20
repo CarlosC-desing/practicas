@@ -7,7 +7,7 @@ export const PokemonCard = ({ data, children }: Props) => {
   if (!data) return null;
   return (
     <>
-      <div className="card" /* style={{ width: "200px" }} */>
+      <div className="card" style={{ width: "200px" }}>
         <img
           style={{ width: "100px" }}
           src={data.sprites.front_default}

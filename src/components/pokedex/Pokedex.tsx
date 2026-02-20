@@ -43,14 +43,17 @@ export default function Pokedex() {
   }, [busquedaPk]);
   return (
     <>
-      <h1
-        className="text-center"
-        style={{ letterSpacing: "10px", fontSize: "60px", margin: "20px 0" }}
-      >
-        Pokedéx
-      </h1>
       <div className="d-flex gap-5">
         <div style={{ width: "30%" }}>
+          <h1
+            style={{
+              letterSpacing: "10px",
+              fontSize: "60px",
+              margin: "20px 0",
+            }}
+          >
+            Pokedéx
+          </h1>
           <div className="d-flex flex-column gap-5">
             <div className="d-flex gap-3">
               <input
@@ -72,8 +75,11 @@ export default function Pokedex() {
             )}
           </div>
         </div>
-        <div className="border rounded p-3" style={{ width: "70%" }}>
-          <h2 className="text-center">Tu Equipo</h2>
+        <div
+          className="border rounded d-flex flex-column align-items-center justify-content-center p-3"
+          style={{ width: "70%" }}
+        >
+          <h2>Tu Equipo</h2>
           <div className="d-flex flex-wrap gap-2">
             {equipo.map((p) => (
               <PokemonCard key={p.id} data={p}>
